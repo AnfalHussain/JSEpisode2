@@ -19,6 +19,65 @@
 ****************************************************************/
 function pairs(names) {
   // Your code goes here
+  const pairs = []
+  if (names == []) {
+    
+    return pairs
+  }
+  if (names == undefined) {
+    return pairs
+  }
+  else{
+    
+    if (names.length %2 ===0 )
+      {  
+        // for (let index = 0; index < names.length/2; index++)
+
+        while(names.length !== 0 )
+        { 
+          let random1 = names.getRandom();
+          let random2 = names.getRandom();
+          pairs.push([random1,random2])
+        }
+        return pairs
+        // console.log(pairs(names))
+
+
+
+
+      }
+
+
+    else
+      {
+        // if names.length  is odd 
+        for (let index = 0; index < (names.length/2 ) ; index++)
+        { 
+
+          let random1 = names.getRandom();
+          let random2 = names.getRandom();
+          pairs.push([random1,random2]);
+        } 
+        for (let index = 0; index < (names.length%2 ) ; index++)
+        { 
+          let random1 = names.getRandom();
+          let random2 = names.getRandom();
+          pairs.push([random1,random2]);
+        }  
+          pairs.push([names.pop()])
+
+        return pairs
+
+
+      } 
+
+
+
+  } 
+
+
+
+
 }
 
 module.exports = pairs;
